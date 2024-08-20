@@ -1,0 +1,16 @@
+/* src/app/app.component.css */
+
+/* Add some basic padding and center content */
+  
+  /* Optional: Full height for the app */
+  :host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Optional: Style for the main content area */
+  .container {
+    flex: 1;
+  }
+  

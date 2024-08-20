@@ -1,0 +1,33 @@
+<!-- src/app/view-slots/view-slots.component.html -->
+<div class="view-slots-container">
+  <h2 class="title">Parking Slots</h2>
+
+  <div *ngFor="let floor of floors" class="floor-section">
+    <h3 class="floor-title">Floor {{ floor }}</h3>
+    <div class="slot-container">
+      <mat-card
+        *ngFor="let slot of parkingSlots[floor]; let i = index"
+        class="slot-card"
+      >
+        <ng-container *ngIf="slot; else availableSlot">
+          <mat-card-title>{{ slot.vehicleType | titlecase }}</mat-card-title>
+          <mat-card-content>
+            <p><strong>Vehicle No:</strong> {{ slot.vehicleNo }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              color="warm"
+              (click)="checkoutVehicle(floor, i)"
+            >
+              Checkout
+            </button>
+          </mat-card-actions>
+        </ng-container>
+        <ng-template #availableSlot>
+          <mat-card-title>Available</mat-card-title>
+        </ng-template>
+      </mat-card>
+    </div>
+  </div>
+</div>

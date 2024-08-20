@@ -1,0 +1,34 @@
+/* src/app/home/home.component.css */
+
+/* Main container styling */
+.home-container {
+    text-align: center;
+    padding: 40px 20px;
+    
+  }
+  
+  /* Banner image styling */
+  .banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Home content styling */
+  .home-content {
+    margin-top: 20px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.5em;
+    color: #1976d2;
+  }
+  
+  .home-content p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  

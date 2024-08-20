@@ -1,0 +1,36 @@
+<!-- src/app/add-vehicle/add-vehicle.component.html -->
+<div class="add-vehicle-container mat-elevation-z8">
+  <h2 class="title">Add Vehicle</h2>
+  <form (ngSubmit)="addVehicle()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Vehicle Type</mat-label>
+      <mat-select [(value)]="vehicleType" required>
+        <mat-option value="" disabled>Select Vehicle Type</mat-option>
+        <mat-option value="car">Car</mat-option>
+        <mat-option value="bike">Bike</mat-option>
+        <mat-option value="truck">Truck</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Vehicle No</mat-label>
+      <input matInput [(ngModel)]="vehicleNo" name="vehicleNo" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Parking Floor</mat-label>
+      <mat-select [(value)]="selectedFloor" required>
+        <mat-option value="" disabled>Select Parking Floor</mat-option>
+        <mat-option *ngFor="let floor of floors" [value]="floor"
+          >Floor {{ floor }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">
+        Add Vehicle
+      </button>
+    </div>
+  </form>
+</div>

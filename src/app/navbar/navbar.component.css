@@ -1,0 +1,33 @@
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+/* Spacer to push nav links to the right */
+.spacer {
+  flex: 1;
+}
+
+/* Nav Links Styling */
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+/* Navbar overall styling */
+mat-toolbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
